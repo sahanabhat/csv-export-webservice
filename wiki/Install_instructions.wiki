@@ -9,3 +9,14 @@ For Windows Server 2003
 -Enable Web Service Extensions
 http://support.microsoft.com/kb/315122/en-us
 -Create a virtual directory for the export service
+
+1. Go to the "Downloads" tab and download the package <b> SaveCsvFile.zip </b> <br />
+2. Create a new virtual directory on MS Server running IIS6.3 or greater with .NET 2.0 or greater.<br />
+3. Unzip the file on any web/application <br />
+4. Provide read/write permissions to the virtual directory and enable the child folders to inherit the permissions. If this option is not automatically provided. Go to the <b> App_Data</b> and <b> App_Code </b> folders.<br />
+5. Modify the site root URL. Go to App_Code/SaveCsvService.cs and modify the following:<br/>
+
+private string _rootUrl = "http://<b>YourServerName</b>/"
+
+
+6. You are now ready to create CSV Files!
