@@ -1,0 +1,11 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+Here are the instructions for installing the service in IIS
+
+For Windows Server 2003
+-Make sure you are running IIS 6.0 and .NET 2.0 and higher
+-Enable Web Service Extensions
+http://support.microsoft.com/kb/315122/en-us
+-Create a virtual directory for the export service
