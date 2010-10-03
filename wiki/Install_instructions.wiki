@@ -16,7 +16,7 @@ http://support.microsoft.com/kb/315122/en-us
 4. Provide read/write permissions to the virtual directory and enable the child folders to inherit the permissions. If this option is not automatically provided. Go to the {{{App_Data}}} and {{{App_Code}}} folders.<br />
 5. Modify the site root URL. Go to {{{App_Code/SaveCsvService.cs}}} and modify the following:<br/>
 
-private string _rootUrl = {{{http://<b>YourServerName/}}}
+private string _rootUrl = {{{http://YourServerName/}}}
 
 
 6. You are now ready to create CSV Files!
