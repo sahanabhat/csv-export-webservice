@@ -2,6 +2,8 @@
 
 = Introduction =
 
+<b> .NET Web Service Instructions </b>
+
 Here are the instructions for installing the service in IIS
 
 For Windows Server 2003
@@ -16,3 +18,18 @@ http://support.microsoft.com/kb/315122/en-us
 4. Provide read/write permissions to the virtual directory and enable the child folders to inherit the permissions. If this option is not automatically provided. Go to the {{{App_Data}}} and {{{App_Code}}} folders.<br />
 5. Modify the site root URL. Go to {{{App_Code/SaveCsvService.cs}}} and modify the following:<br/>private string _rootUrl = {{{http://YourServerName/}}}<br />
 6. You are now ready to create CSV Files!
+
+<br/><br/>
+<b>JAX (Java API for XML Web Services) Instructions/ </b>
+<br/>
+
+1. For Tomcat Server, place the WAR file into your WebApps Directory<br/>
+2. Restart Tomcat server to deploy WAR file.
+<br/>
+PLEASE NOTE:<br/>
+the directory and download urls are defined in the WEB_INF/web.xml file (WEB_DIR and WEB_URL, respectively). If you use the provided war you have to edit web.xml within the war file.
+
+IMPORTANT: Tomcat needs to have permissions to read/write the WEB_DIR 
+
+The page lists the url to the wsdl of the webservice:
+http://localhost:8080/SaveCsv/SaveCsvService?wsdl
